@@ -44,3 +44,7 @@ button {
     padding: 70px 0;
     text-align: center;
 }
+ol {
+    padding-left: 20%;
+    padding-right: 20%;
+}
