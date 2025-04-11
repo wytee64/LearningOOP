@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home | OOP</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1>learning OOP</h1>
+
+<h2>1.Classes</h2>
+
+<h3>What is a class?</h3>
+
+<ul>
+    <li>
+        A class is like a template or blueprint that defines:
+        <ul>
+            <li><b>Attributes</b>(data/state)</li>
+            <li><b>Behaviors</b>(methods/functions)</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Why use classes?</h3>
+
+<ul>
+    <li>
+        To create <b>structured, modular</b> and <b>reusable</b> code.
+    </li>
+    <li>
+        Helps in modeling <b>real-world objects</b> (like Person, Car, BankAccount).
+    </li>
+</ul>
+
+<h3 class="codeHeader">Snytax example</h3>
+
+<pre>
+    <code>
+  public class Car {
+    String model;
+    int year;
+
+    void startEngine() {
+        System.out.println("The " + model + " engine has started.");
+    }
+  }</code>
+  </pre>
+
+<hr>
+
+<h2>2.Object</h2>
+
+<h3>What is an object?</h3>
+
+<ul>
+    <li>Is an Instance of a class.</li>
+    <li>Created using the <b>new</b> keyword.</li>
+    <li>Has its own values for the class's fields.</li>
+</ul>
+
+<h3 class="codeHeader">How to create an object</h3>
+
+<pre>
+    <code>
+  Car car1 = new Car();
+  car1.model = "Toyota Corolla";
+  car1.year = 2020;
+  car1.startEngine(); // Output: The Toyota Corolla engine has started.</code>
+  </pre>
+
+<h3>Real-life Analogy</h3>
+
+<ul>
+    <li>Class = recipe</li>
+    <li>Object = cake made from the recipe</li>
+</ul>
+
+<hr>
+
+<h2>3.Arrays</h2>
+
+<h2>what is an array?</h2>
+
+<ul>
+    <li>A <b>fixed-size</b> collection of elements of the <b>same datatype.</b></li>
+    <li>Index-based(starts at zero).</li>
+    <li>Must specify size when created.</li>
+</ul>
+
+<h3 class="codeHeader">Syntax:</h3>
+
+<pre>
+    <code>
+  int[] numbers = new int[5];         // Empty array of size 5
+  String[] names = {"Anna", "Ben"};   // Initialized array</code>
+  </pre>
+
+<h3 class="codeHeader">Accessing and Modifying:</h3>
+
+<pre>
+    <code>
+  numbers[0] = 10;
+  System.out.println(numbers[0]); // 10</code>
+  </pre>
+
+<h3 class="CodeHeader">Iterating:</h3>
+
+<pre>
+    <code>
+  for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+  }</code>
+  </pre>
+
+<h3>Limitation:</h3>
+
+<ul>
+    <li>Size is fixed once defined.</li>
+    <li>Not flexible for dynamic data.</li>
+</ul>
+
+<hr>
+
+<h2>4.List (Interface)</h2>
+
+<h3>What is a List?</h3>
+
+<ul>
+    <li>Is an interface in Java.</li>
+    <li>Represent an <b>ordered, resizable</b> collection.</li>
+    <li>Can hold <b>duplicate</b> elements.</li>
+    <li>The most common implementation is an <b>Arraylist</b></li>
+</ul>
+
+<h2 class="codeHeader">Example:</h2>
+
+<pre>
+    <code>
+  List&lt;String&gt; fruits = new ArrayList<>();
+  fruits.add("Apple");
+  fruits.add("Banana");
+  System.out.println(fruits.get(1)); // Banana
+    </code>
+  </pre>
+
+<h2>5.Arraylist</h2>
+
+<h3>What is an Arraylist?</h3>
+
+<ul>
+    <li>A <b>resizable array</b> implementation of the List interface.</li>
+    <li>Useful when data size is unknown or dynamic.</li>
+</ul>
+
+<h3>Features:</h3>
+
+<ul>
+    <li>Fast access via index</li>
+    <li>Allow duplicates</li>
+    <li>Can grow/Shrink dynamically</li>
+</ul>
+
+<h3 class="codeHeader">Example:</h3>
+
+<pre>
+    <code>
+  ArrayList&lt;Integer&gt; numbers = new ArrayList<>();
+  numbers.add(10);
+  numbers.add(20);
+  numbers.remove(0); // Removes 10</code>
+  </pre>
+
+<h2>6.Methods</h2>
+
+<h3>What is a Method?</h3>
+
+<ul>
+    <li>A block of code that performs a specific task</li>
+    <li>defined once and reused.</li>
+    <li>Can return a value or be void.</li>
+</ul>
+
+<h3 class="codeheader">Example:</h3>
+
+<pre>
+    <code>
+  int multiply(int a, int b) {
+    return a * b;
+  }</code>
+  </pre>
+
+<h3>Overloading:</h3>
+<p>Same name, different parameters.</p>
+
+<pre>
+    <code>
+  void greet() { System.out.println("Hi"); }
+  void greet(String name) { System.out.println("Hi, " + name); }</code>
+  </pre>
+
+<h2>7.Abstraction</h2>
+<h3>What is Abstraction?</h3>
+
+<ul>
+    <li><b>Hiding internal details</b>, showing only what's necessary.</li>
+    <li>Simplifies usage and reduces complexity.</li>
+</ul>
+
+<h3>Two ways in Java:</h3>
+<ul>
+    <li>Abstact class</li>
+    <li>Interface</li>
+</ul>
+<h3 class="codeHeader">Example:</h3>
+<pre>
+    <code>
+  abstract class Shape {
+    abstract double area();
+  }
+
+  class Circle extends Shape {
+    double radius;
+
+    Circle(double r) { radius = r; }
+
+    double area() {
+      return Math.PI * radius * radius;
+    }
+  }</code>
+  </pre>
+<h2>8.Inheritance</h2>
+<h3>What is Inherince?</h3>
+<ul>
+    <li><b>Hiding internal details</b>, showing only what's necessary</li>
+    <li>Simplies usage and reduces complexity.</li>
+</ul>
+<h3 class="codeHeader">Syntax:</h3>
+<pre>
+    <code>
+  class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+  }
+
+  class Dog extends Animal {
+      void bark() {
+          System.out.println("Barking...");
+      }
+  }</code>
+  </pre>
+<h3 class="codeHeader">Example:</h3>
+<pre>
+    <code>
+  Dog d = new Dog();
+  d.eat(); // Inherited
+  d.bark(); // Own method
+    </code>
+  </pre>
+<h2>10. Encapsulation</h2>
+<h3>What is Encapsulation?</h3>
+<ul>
+    <li>Keeping data <b>safe</b> by hiding it inside a class.</li>
+    <li>Fileds are <b>private</b>, accessed via <b>public</b> methods.</li>
+</ul>
+<h2 class="codeHeader">Example:</h2>
+<pre>
+    <code>
+  class Account {
+    private double balance;
+
+    public void deposit(double amount) {
+      if (amount > 0) balance += amount;
+    }
+
+    public double getBalance() {
+      return balance;
+    }
+  }</code>
+  </pre>
+<div class="container">
+    <a href="questions.html"><button type="button">Exercises</button></a>
+
+</div>
+<hr>
+<footer>
+    <p>by WaterMelon</p>
+</footer>
+</body>
+</html>
