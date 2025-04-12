@@ -48,3 +48,44 @@ ol {
     padding-left: 5%;
     padding-right: 5%;
 }
+
+a:link {
+    color: red;
+    background-color: transparent;
+}
+
+a:visited {
+    color: deeppink;
+    background-color: transparent;
+}
+
+a:hover {
+    color: chartreuse;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+}
+
+* {
+    scrollbar-color: #4aa3df #a0d2eb;
+}
+
+body {
+    background-color: #2c6f9b; /* kept this close to your original but a bit more muted */
+}
+
+pre {
+    background-color: #4aa3df;
+}
+
+hr {
+    background-color: #1e1e2f;
+}
+
+button {
+    background-color: #4aa3df;
+}
