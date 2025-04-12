@@ -7,7 +7,14 @@ html {
 }
 
 body {
-    background-color: #2c6f9b;}
+    background-color: #2c6f9b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+}
 
 ul{
     padding-top: 0;
